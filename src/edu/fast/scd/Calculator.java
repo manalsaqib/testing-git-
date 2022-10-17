@@ -141,22 +141,7 @@ public class Calculator extends Frame implements ActionListener {
 		}
 
 	
-	if(arg0.getSource()==btn4)  //for dividing
-	{
-		try {
-		double d1 = Double.parseDouble(txt1.getText());
-		double d2 = Double.parseDouble(txt2.getText());
-		double div =d1/d2;
-		
-		
-		this.txt3.setText(String.valueOf(div));
-		}
-		catch(NumberFormatException e)
-		{
-			txt3.setText(String.valueOf("Wrong input"));
-			
-	
-		}
+
 		
 
 		}
