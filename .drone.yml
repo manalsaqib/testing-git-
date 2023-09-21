@@ -5,8 +5,15 @@ steps:
   - name: checkout
     image: alpine/git
     commands:
-      - git clone https://github.com/manalsaqib/testing-git-.git /drone/src  # Replace with your repository URL
+      - git clone https://github.com/manalsaqib/testing-git-.git /drone/src/materio  # Replace <repository_url> with your repository URL
       - cd /drone/src  # Change the working directory to your project root
 
-  - name: install_dependencies 
+  - name: install_dependencies
+    image: node:14  # Use a Node.js version compatible with your project
+    commands:
+      - npm install  # Install project dependencies (if you have any)
+    
   - name: build
+    image: node:14
+    commands:
+      - npm run build  # Replace with your build script or commands
